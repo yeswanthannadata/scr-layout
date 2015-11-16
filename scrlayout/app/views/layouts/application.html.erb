@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scrlayout</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.2/js/materialize.min.js"></script>
+          
+</head>
+<body>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper #b71c1c red darken-4">
+        <a href="<%= pages_home_path %>" class="brand-logo">Here U Wish</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="<%= pages_home_path %>">Home</a></li>
+          <li><a href="<%= pages_trailers_path %>">Trailers</a></li>
+          <li><a href="<%= pages_funny_path %>">Funny</a></li>
+          <li><a href="<%= pages_cricket_path %>">Cricket</a></li>
+        </ul>
+    </div>
+  </nav>
+</div>
+  <div class="row #424242 grey darken-3">
+  	<div class="col s12 m8 l9">
+  		<%= yield %>
+  	</div>
+  </div>
+<footer class="page-footer #b71c1c red darken-4">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Here U Wish</h5>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="<%= pages_home_path %>">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="<%= pages_trailers_path %>">Trailers</a></li>
+                  <li><a class="grey-text text-lighten-3" href="<%= pages_funny_path %>">Funny</a></li>
+                  <li><a class="grey-text text-lighten-3" href="<%= pages_cricket_path %>">Cricket</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2015 Copyright Text
+            </div>
+          </div>
+        </footer>
+</body>
+</html>
